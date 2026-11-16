@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Простір безпеки: Кошара, Лоза та Дика Олива — Педагогічний посібник</title>
+   <meta name="description"
+      content="Інтерактивний освітньо-методичний посібник про переклад біблійних метафор у площину сучасної педагогіки, виховання, права та пенітенціарної ресоціалізації.">
+
+   <!-- Open Graph теги для красивого відображення посилання у Telegram, Viber, Facebook -->
+   <meta property="og:type" content="website">
+   <meta property="og:locale" content="uk_UA">
+   <meta property="og:site_name" content="Pedagogical Sheepfold • Простір безпеки">
+   <meta property="og:title" content="Простір безпеки: Кошара, Лоза та Дика Олива">
+   <meta property="og:description"
+      content="Від біблійної символіки до педагогіки, права та ресоціалізації: посібник, тренінг для вчителів, картки кейсів та презентація.">
+
+   <style>
+      :root {
+         --bg-color: #f8f6f2;
+         --card-bg: #ffffff;
+         --text-main: #2d3142;
+         --text-muted: #5c6378;
+         --accent: #8c6239;
+         --accent-hover: #704d2c;
+         --accent-light: #f3ece4;
+         --border-color: #e5e0d8;
+      }
+
+      html {
+         scroll-behavior: smooth;
+      }
+
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         background-color: var(--bg-color);
+         color: var(--text-main);
+         line-height: 1.6;
+         padding: 20px;
+      }
+
+      .container {
+         max-width: 960px;
+         margin: 0 auto;
+      }
+
+      header {
+         text-align: center;
+         padding: 40px 25px 30px;
+         background: var(--card-bg);
+         border-radius: 12px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+         margin-bottom: 25px;
+         border-bottom: 4px solid var(--accent);
+      }
+
+      .site-kicker {
+         display: inline-block;
+         font-size: 0.8rem;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 1.2px;
+         color: var(--accent);
+         background: var(--accent-light);
+         padding: 4px 12px;
+         border-radius: 20px;
+         margin-bottom: 12px;
+      }
+
+      header h1 {
+         font-size: 2.2rem;
+         color: var(--accent);
+         margin-bottom: 10px;
+      }
+
+      header p {
+         font-size: 1.1rem;
+         color: var(--text-muted);
+         margin-bottom: 22px;
+      }
+
+      .header-actions {
+         display: flex;
+         justify-content: center;
+         margin-bottom: 22px;
+      }
+
+      .print-btn {
+         display: inline-flex;
+         align-items: center;
+         gap: 8px;
+         background-color: var(--accent);
+         color: #ffffff;
+         border: none;
+         padding: 10px 22px;
+         font-size: 0.95rem;
+         font-weight: 600;
+         border-radius: 8px;
+         cursor: pointer;
+         transition: background-color 0.2s ease, transform 0.1s ease;
+      }
+
+      .print-btn:hover {
+         background-color: var(--accent-hover);
+      }
+
+      .print-btn:active {
+         transform: scale(0.98);
+      }
+
+      /* Панель навігації методичного комплекту */
+      .kit-nav {
+         border-top: 1px solid var(--border-color);
+         padding-top: 18px;
+         margin-top: 5px;
+      }
+
+      .kit-nav-label {
+         font-size: 0.8rem;
+         text-transform: uppercase;
+         letter-spacing: 0.6px;
+         color: var(--text-muted);
+         font-weight: 700;
+         margin-bottom: 12px;
+      }
+
+      .kit-links {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 10px;
+      }
+
+      .kit-link {
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         text-decoration: none;
+         background-color: var(--accent-light);
+         color: var(--accent);
+         border: 1px solid #dfd3c3;
+         padding: 8px 14px;
+         border-radius: 8px;
+         font-size: 0.9rem;
+         font-weight: 600;
+         transition: all 0.2s ease;
+      }
+
+      .kit-link:hover {
+         background-color: var(--accent);
+         color: #ffffff;
+         border-color: var(--accent);
+         transform: translateY(-2px);
+      }
+
+      /* Стилі для блоку змісту */
+      .toc {
+         background: var(--card-bg);
+         border-radius: 12px;
+         padding: 22px 28px;
+         margin-bottom: 25px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+         border: 1px solid var(--border-color);
+      }
+
+      .toc-title {
+         font-size: 1.15rem;
+         font-weight: bold;
+         color: var(--accent);
+         margin-bottom: 12px;
+      }
+
+      .toc-list {
+         list-style: none;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+         gap: 8px 20px;
+         margin: 0;
+      }
+
+      .toc-list li {
+         margin-bottom: 0;
+      }
+
+      .toc-list a {
+         text-decoration: none;
+         color: var(--text-main);
+         font-size: 0.95rem;
+         display: flex;
+         align-items: baseline;
+         padding: 4px 0;
+         transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      .toc-list a:hover {
+         color: var(--accent);
+         transform: translateX(4px);
+      }
+
+      .toc-num {
+         color: var(--accent);
+         font-weight: bold;
+         margin-right: 8px;
+         min-width: 26px;
+      }
+
+      .card {
+         background: var(--card-bg);
+         border-radius: 12px;
+         padding: 30px;
+         margin-bottom: 25px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+         border: 1px solid var(--border-color);
+         scroll-margin-top: 20px;
+      }
+
+      .section-badge {
+         display: inline-block;
+         background: var(--accent-light);
+         color: var(--accent);
+         font-size: 0.8rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+         padding: 4px 10px;
+         border-radius: 6px;
+         margin-bottom: 10px;
+      }
+
+      h2 {
+         color: var(--accent);
+         font-size: 1.5rem;
+         margin-bottom: 15px;
+         padding-bottom: 8px;
+         border-bottom: 1px solid var(--border-color);
+      }
+
+      h3 {
+         font-size: 1.15rem;
+         margin: 18px 0 8px;
+         color: var(--text-main);
+      }
+
+      p {
+         margin-bottom: 12px;
+      }
+
+      ul,
+      ol {
+         list-style-position: inside;
+         margin-bottom: 15px;
+      }
+
+      li {
+         margin-bottom: 10px;
+      }
+
+      blockquote {
+         background: var(--accent-light);
+         border-left: 4px solid var(--accent);
+         padding: 15px 20px;
+         margin: 20px 0;
+         font-style: italic;
+         border-radius: 0 8px 8px 0;
+      }
+
+      blockquote cite {
+         display: block;
+         margin-top: 8px;
+         font-style: normal;
+         font-weight: bold;
+         font-size: 0.9rem;
+         color: var(--accent);
+      }
+
+      .grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+         gap: 20px;
+         margin-top: 15px;
+      }
+
+      .grid-item {
+         background: var(--bg-color);
+         padding: 20px;
+         border-radius: 8px;
+         border: 1px solid var(--border-color);
+      }
+
+      .stage-box {
+         background: var(--bg-color);
+         border: 1px solid var(--border-color);
+         border-left: 4px solid var(--accent);
+         border-radius: 8px;
+         padding: 18px 22px;
+         margin-bottom: 18px;
+      }
+
+      .stage-header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 8px;
+         margin-bottom: 10px;
+         border-bottom: 1px dashed var(--border-color);
+         padding-bottom: 6px;
+      }
+
+      .stage-title {
+         font-weight: bold;
+         font-size: 1.1rem;
+         color: var(--accent);
+      }
+
+      .stage-time {
+         background: var(--accent-light);
+         color: var(--accent);
+         font-size: 0.85rem;
+         font-weight: bold;
+         padding: 2px 10px;
+         border-radius: 12px;
+      }
+
+      .highlight-box {
+         background: var(--accent-light);
+         padding: 18px 22px;
+         border-radius: 8px;
+         border-left: 4px solid var(--accent);
+         margin-top: 20px;
+      }
+
+      /* Стилі для таблиці */
+      .table-wrapper {
+         overflow-x: auto;
+         margin-top: 20px;
+         border-radius: 8px;
+         border: 1px solid var(--border-color);
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         text-align: left;
+         font-size: 0.92rem;
+      }
+
+      th,
+      td {
+         padding: 12px 14px;
+         border-bottom: 1px solid var(--border-color);
+         vertical-align: top;
+      }
+
+      th {
+         background-color: var(--accent-light);
+         color: var(--accent);
+         font-weight: bold;
+      }
+
+      tr:last-child td {
+         border-bottom: none;
+      }
+
+      tr:nth-child(even) {
+         background-color: #fcfbf9;
+      }
+
+      /* Кнопка повернення вгору */
+      #scrollTopBtn {
+         position: fixed;
+         bottom: 25px;
+         right: 25px;
+         z-index: 99;
+         border: none;
+         outline: none;
+         background-color: var(--accent);
+         color: white;
+         cursor: pointer;
+         width: 46px;
+         height: 46px;
+         border-radius: 50%;
+         font-size: 20px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+         opacity: 0;
+         visibility: hidden;
+         transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease, transform 0.2s ease;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      #scrollTopBtn.visible {
+         opacity: 1;
+         visibility: visible;
+      }
+
+      #scrollTopBtn:hover {
+         background-color: var(--accent-hover);
+         transform: translateY(-3px);
+      }
+
+      footer {
+         text-align: center;
+         padding: 20px;
+         color: var(--text-muted);
+         font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+         header h1 {
+            font-size: 1.6rem;
+         }
+
+         .card {
+            padding: 20px;
+         }
+
+         .toc {
+            padding: 18px 20px;
+         }
+
+         .toc-list {
+            grid-template-columns: 1fr;
+         }
+
+         .kit-links {
+            flex-direction: column;
+         }
+
+         .kit-link {
+            justify-content: center;
+         }
+
+         #scrollTopBtn {
+            bottom: 18px;
+            right: 18px;
+            width: 42px;
+            height: 42px;
+         }
+      }
+
+      /* Стилі для друку та збереження у PDF */
+      @media print {
+         @page {
+            margin: 12mm;
+            size: A4 portrait;
+         }
+
+         body {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 0;
+            font-size: 10.5pt;
+            line-height: 1.4;
+         }
+
+         .container {
+            max-width: 100%;
+            margin: 0;
+         }
+
+         /* Приховуємо інтерактивні елементи */
+         .toc,
+         .header-actions,
+         .kit-nav,
+         #scrollTopBtn {
+            display: none !important;
+         }
+
+         header {
+            box-shadow: none;
+            border: none;
+            border-bottom: 2px solid #8c6239;
+            padding: 10px 0 16px;
+            margin-bottom: 18px;
+         }
+
+         header p {
+            margin-bottom: 0;
+         }
+
+         .card {
+            box-shadow: none;
+            border: 1px solid #d0c8bc;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+            break-inside: avoid;
+            page-break-inside: avoid;
+         }
+
+         blockquote,
+         .grid-item,
+         .stage-box,
+         .highlight-box,
+         tr {
+            break-inside: avoid;
+            page-break-inside: avoid;
+         }
+
+         blockquote,
+         .grid-item,
+         .stage-box,
+         .highlight-box,
+         th,
+         .section-badge,
+         .site-kicker {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+         }
+
+         .grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+         }
+
+         .table-wrapper {
+            overflow: visible;
+         }
+
+         table {
+            font-size: 8.5pt;
+         }
+
+         th,
+         td {
+            padding: 6px 8px;
+         }
+
+         footer {
+            padding-top: 10px;
+            font-size: 9pt;
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="container" id="top">
+      <header>
+         <div class="site-kicker">Простір педагогічної безпеки • Pedagogical Sheepfold</div>
+         <h1>Кошара, Лоза та Дика Олива</h1>
+         <p>Від біблійної символіки до педагогіки, права та пенітенціарної ресоціалізації</p>
+
+         <div class="header-actions">
+            <button class="print-btn" onclick="window.print()" title="Роздрукувати або зберегти у форматі PDF">
+               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+               </svg>
+               Роздрукувати посібник / Зберегти в PDF
+            </button>
+         </div>
+
+         <div class="kit-nav" aria-label="Матеріали семінару">
+            <div class="kit-nav-label">Інструменти методичного комплекту (відкрити в один клік):</div>
+            <div class="kit-links">
+               <a href="prezentatsiya.html" target="_blank" class="kit-link">📽️ Презентація (Слайди)</a>
+               <a href="kartky-treninh.html" target="_blank" class="kit-link">🗂️ Картки для 3-х груп (А4)</a>
+               <a href="anketa-vidhuk.html" target="_blank" class="kit-link">📝 Анкета відгуку (А4)</a>
+               <a href="sertifikat.html" target="_blank" class="kit-link">🎓 Сертифікат учасника (А4)</a>
+            </div>
+         </div>
+      </header>
+
+      <nav class="toc" aria-label="Зміст статті">
+         <div class="toc-title">Зміст</div>
+         <ul class="toc-list">
+            <li><a href="#sec-1"><span class="toc-num">1.</span> Побутове значення «кошари»</a></li>
+            <li><a href="#sec-2"><span class="toc-num">2.</span> Образ кошари у словах Ісуса</a></li>
+            <li><a href="#sec-3"><span class="toc-num">3.</span> «Вівці з іншої кошари» та релігії</a></li>
+            <li><a href="#sec-4"><span class="toc-num">4.</span> Вівці та козли: характер і поведінка</a></li>
+            <li><a href="#sec-5"><span class="toc-num">5.</span> Чи може «козел» стати «вівцею»?</a></li>
+            <li><a href="#sec-6"><span class="toc-num">6.</span> Метафора виноградної лози</a></li>
+            <li><a href="#sec-7"><span class="toc-num">7.</span> Кози, сухі галузки та дика олива</a></li>
+            <li><a href="#sec-8"><span class="toc-num">8.</span> Педагогічна площина (Навчання)</a></li>
+            <li><a href="#sec-9"><span class="toc-num">9.</span> Виховна площина (Характер)</a></li>
+            <li><a href="#sec-10"><span class="toc-num">10.</span> Проміжна ланка: Право, Закон і суспільство</a></li>
+            <li><a href="#sec-11"><span class="toc-num">11.</span> Пенітенціарна площина (Виправлення)</a></li>
+            <li><a href="#sec-12"><span class="toc-num">12.</span> Зведена порівняльна таблиця</a></li>
+            <li><a href="#sec-13"><span class="toc-num">13.</span> Тренінг-семінар для вчителів (Сценарій)</a></li>
+         </ul>
+      </nav>
+
+      <section class="card" id="sec-1">
+         <span class="section-badge">Лексика та символізм</span>
+         <h2>1. Побутове та лексичне значення «кошари»</h2>
+         <p><strong>Кошара</strong> — це загорода, хлів або спеціальне приміщення для утримання овець і кіз (вівчарня).
+            Слово має тюркське коріння і походить від терміна <em>«кош»</em> (стан, загородження).</p>
+         <ul>
+            <li><strong>Господарство:</strong> Критий хлів або відкритий загін для отари.</li>
+            <li><strong>Фольклор:</strong> Часто згадується в українських щедрівках та колядках як символ достатку.</li>
+            <li><strong>Переносне значення:</strong> Тісне, переповнене людьми приміщення.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-2">
+         <span class="section-badge">Біблійний контекст</span>
+         <h2>2. Біблійний образ кошари у словах Ісуса Христа</h2>
+         <p>У 10-му розділі Євангелія від Івана Ісус використовує образ кошари як метафору <strong>Божого народу, Церкви
+               та духовного захисту</strong>.</p>
+
+         <blockquote>
+            «Я — двері: хто ввійде крізь Мене, той спасеться, і ввійде, і вийде, і пасовисько знайде... Я — Пастир
+            Добрий. Пастир Добрий кладе життя власне за вівці».
+            <cite>— Євангеліє від Івана 10:9, 11</cite>
+         </blockquote>
+
+         <p>На Близькому Сході кошари часто не мали дерев'яних воріт — сам пастух лягав спати в отворі, стаючи «живими
+            дверима», щоб захистити стадо від хижаків і злодіїв.</p>
+      </section>
+
+      <section class="card" id="sec-3">
+         <span class="section-badge">Міжрелігійний діалог</span>
+         <h2>3. «Вівці з іншої кошари» та світові релігії</h2>
+         <blockquote>
+            «Також маю Я інших овець, які не з цієї кошари; і їх Я мушу привести, і почують вони Мій голос, — і буде
+            одне стадо й один Пастир».
+            <cite>— Євангеліє від Івана 10:16</cite>
+         </blockquote>
+         <p>У цьому уривку «ця кошара» означає юдейський народ, а «інші вівці» — язичників (усі інші народи світу). Щодо
+            послідовників інших релігій (індуїзму, буддизму тощо) існують три основні погляди:</p>
+
+         <div class="grid">
+            <div class="grid-item">
+               <h3>Ексклюзивізм</h3>
+               <p>Класичне християнство: люди інших вірувань покликані залишити свої традиції, почути Євангеліє і
+                  приєднатися до єдиної Церкви Христа.</p>
+            </div>
+            <div class="grid-item">
+               <h3>Інклюзивізм</h3>
+               <p>Визнає «зерна істини» в індуїзмі чи буддизмі. Щирі шукачі Бога можуть бути спасенні завдяки Христу,
+                  навіть не знаючи Його за ім'ям.</p>
+            </div>
+            <div class="grid-item">
+               <h3>Універсалізм</h3>
+               <p>Філософський та східний підхід: усі релігії — це різні «кошари» або рівноцінні шляхи, що ведуть до
+                  однієї Вищої Реальності.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="card" id="sec-4">
+         <span class="section-badge">Психологія поведінки</span>
+         <h2>4. Вівці та козли: характер і поведінка</h2>
+         <p>У притчі про Страшний суд (Матвія 25:31–46) поділ на «овець» і «козлів» не стосується статі тварин чи
+            релігійної приналежності. Це метафора двох типів людської поведінки:</p>
+
+         <blockquote>
+            «І зберуться перед Ним усі народи, і Він відділить їх один від одного, як пастух відділяє овець від козлів;
+            і поставить овець праворуч Себе, а козлів — ліворуч».
+            <cite>— Євангеліє від Матвія 25:32–33</cite>
+         </blockquote>
+
+         <ul>
+            <li><strong>Вівці (довіра та слухняність):</strong> Тримаються отари, беззахисні самі по собі й орієнтуються
+               на голос пастуха. Це образ смирення, відкритості та здатності слідувати за добром.</li>
+            <li><strong>Кози (норовливість та індивідуалізм):</strong> Схильні відбиватися від стада, залазити в
+               небезпечні місця й діяти на власний розсуд. Це символ гордині, егоїзму та небажання чути голос совісті.
+            </li>
+            <li><strong>Критерій вчинків:</strong> Головна різниця виявляється у ставленні до ближніх — у милосерді,
+               допомозі голодним, хворим і нужденним.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-5">
+         <span class="section-badge">Внутрішня трансформація</span>
+         <h2>5. Чи може «козел» стати «вівцею»?</h2>
+         <p>У реальному житті коза ніколи не змінить свій біологічний вид, але в духовному вченні Ісуса Христа
+            <strong>внутрішня трансформація людини — це головна мета Його поклику</strong>.</p>
+
+         <ul>
+            <li><strong>Зміна мислення (метаноя):</strong> У Біблії покаяння означає буквально «переміну розуму».
+               Людина, яка жила за законами гордині, може свідомо відгукнутися на поклик Бога і змінити своє серце.</li>
+            <li><strong>Дія благодаті:</strong> Християнство вчить, що людина змінює свою природу не лише власною силою
+               волі, а відкриваючись для Божої допомоги («народження згори»).</li>
+            <li><strong>Приклади з Євангелія:</strong> Жадібний збирач податків Закхей, жорстокий гонитель християн Савл
+               (апостол Павло) та розбійник на хресті — усі вони поводилися як «козли», але змінилися, почувши голос
+               Христа.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-6">
+         <span class="section-badge">Джерело життя</span>
+         <h2>6. Метафора виноградної лози</h2>
+         <p>Якщо образ «кошари» описує зовнішній захист і належність до спільноти, то образ <strong>виноградної
+               лози</strong> (Євангеліє від Івана 15:1–8) розкриває глибокий внутрішній зв’язок людини з Богом.</p>
+
+         <blockquote>
+            «Я — правдива Виноградна Лоза, а Отець Мій — Виноградар... Як галузка не може вродити плоду сама з себе,
+            коли не позостанеться на виноградній лозі, так і ви, як в Мені перебувати не будете».
+            <cite>— Євангеліє від Івана 15:1, 4</cite>
+         </blockquote>
+
+         <ul>
+            <li><strong>Три ролі в притчі:</strong> Ісус — це Лоза (стовбур, що дає життя), Бог Отець — Виноградар (Той,
+               хто доглядає), а люди — галузки.</li>
+            <li><strong>Необхідність живого зв’язку:</strong> Галузка не здатна генерувати сік сама по собі — вона лише
+               проводить поживні речовини від кореня до ягід. Без зв’язку з Лозою будь-які людські зусилля залишаються
+               духовно безплідними.</li>
+            <li><strong>Очищення (обрізка):</strong> Виноградар обрізає навіть плодоносні гілки, видаляючи зайві пагони,
+               щоб рослина не витрачала сили на листя, а давала більше ягід. У житті людини це символізує випробування
+               та відсікання всього зайвого, що заважає духовному зростанню.</li>
+            <li><strong>Доля сухих галузок:</strong> Гілка, яка відірвалася від Лози, неминуче засихає, втрачає
+               гнучкість і стає придатною лише для вогню.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-7">
+         <span class="section-badge">Синтез образів</span>
+         <h2>7. Кози, сухі галузки та дика олива: одна природа</h2>
+         <p>Ці три біблійні образи об’єднує спільна думка: <strong>природний стан людини без живого зв’язку з Творцем та
+               можливість зміни її «породи»</strong>.</p>
+
+         <div class="grid">
+            <div class="grid-item">
+               <h3>Кози</h3>
+               <p><strong>Символ непокори:</strong> Уособлюють самовпевненість і бажання йти власним шляхом, ігноруючи
+                  голос Пастиря та потреби ближніх.</p>
+            </div>
+            <div class="grid-item">
+               <h3>Сухі галузки</h3>
+               <p><strong>Символ відірваності:</strong> Показують, що стається з людиною, яка від’єдналася від Джерела
+                  життя — вона втрачає життєву силу й стає безплідною.</p>
+            </div>
+            <div class="grid-item">
+               <h3>Дика олива</h3>
+               <p><strong>Символ щеплення (Рим. 11:17–24):</strong> Язичники — це дика олива з гіркими плодами. Бог
+                  «всупереч природі» прищеплює її до шляхетного кореня, завдяки чому вона змінює свою породу і починає
+                  давати добрі плоди.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="card" id="sec-8">
+         <span class="section-badge">Прикладна площина • Етап 1</span>
+         <h2>8. Педагогічна площина (Навчання та освітнє середовище)</h2>
+         <p>У педагогіці ці символи описують взаємодію <strong>вчителя, учня та освітнього простору</strong>,
+            допомагаючи зрозуміти різні типи поведінки дітей у класі:</p>
+         <ul>
+            <li><strong>Кошара як безпечний освітній простір:</strong> Школа чи клас — це територія, де дитина захищена
+               від зовнішнього хаосу. Учитель виступає «Дверима» та «Пастирем»: він встановлює правила, які не обмежують
+               свободу, а гарантують безпеку для розвитку.</li>
+            <li><strong>«Вівці» та «кози» як когнітивні стилі учнів:</strong> <em>«Вівці»</em> — це конформні, слухняні
+               учні, які легко приймають правила і добре працюють у системі, але можуть боятися самостійності.
+               <em>«Кози»</em> — норовливі, допитливі індивідуалісти, які порушують дисципліну та ставлять незручні
+               запитання. Завдання педагога — не вигнати «козу» зі стада, а спрямувати її енергію в дослідницьке русло.
+            </li>
+            <li><strong>Виноградна лоза як передача знань:</strong> Учень (галузка) не може сформувати системне мислення
+               без зв’язку з базовою наукою та наставником (Лозою). «Обрізка» в педагогіці — це конструктивна критика та
+               відсікання інформаційного шуму, щоб учень дав якісний інтелектуальний «плід».</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-9">
+         <span class="section-badge">Прикладна площина • Етап 2</span>
+         <h2>9. Виховна площина (Формування характеру та цінностей)</h2>
+         <p>У вихованні фокус зміщується зі знань на <strong>моральний вибір, емпатію та самоконтроль</strong>
+            особистості:</p>
+         <ul>
+            <li><strong>Від «дикої оливи» до шляхетного плоду:</strong> Дитина приходить у світ із природними
+               інстинктами егоїзму (як «дика олива» або норовливе козеня). Виховання — це процес «щеплення» культурних і
+               моральних цінностей. Воно відбувається не через ламання природи дитини, а через приєднання її до
+               здорового середовища (сім'ї, громади, наставника).</li>
+            <li><strong>Критерій вчинків:</strong> Головний показник вихованості — не знання правил етикету, а дієве
+               милосердя: чи здатна дитина допомогти слабшому, поділитися, проявити співчуття.</li>
+            <li><strong>Внутрішня трансформація (метаноя):</strong> Виховання має на меті не зовнішній послух під
+               наглядом дорослого, а зміну внутрішньої мотивації — коли підліток робить добро не зі страху покарання, а
+               тому, що це стало його новою природою.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-10">
+         <span class="section-badge">Прикладна площина • Етап 3 (Проміжна ланка)</span>
+         <h2>10. Право, Закон та соціальні інститути</h2>
+         <p>Між шкільною партою та в'язницею стоїть цілий пласт <strong>правових та суспільних інститутів</strong>
+            (правова система держави, ринок праці, громадянське суспільство, ювенальна превенція та пробація), які
+            супроводжують дорослу людину у великому світі:</p>
+         <ul>
+            <li><strong>Право і Закон як «велика огорожа» (Кошара суспільства):</strong> Коли людина виходить з-під
+               опіки школи, «кошарою» стає правове поле держави. Закон встановлює межі дозволеного: всередині цих меж
+               громадянин захищений і вільний («ввійде, і вийде, і пасовисько знайде»), а вихід за межі права наражає
+               його на відповідальність. У Біблії апостол Павло прямо називав Закон <em>«дітоводителем»</em>
+               (вихователем), який стримує «дику» природу людини від руйнування.</li>
+            <li><strong>Трудовий колектив, університет, армія:</strong> Це інститути дорослої соціалізації, які діють як
+               «виноградні лози». Через спільну працю, дисципліну та відповідальність юнацький егоїзм («дика олива»)
+               окультурюється і починає приносити користь суспільству.</li>
+            <li><strong>Ювенальна превенція та пробація (останній рубіж перед в'язницею):</strong> Якщо людина починає
+               поводитися як норовлива «коза» і порушує правила, втручаються превентивні служби або інститут пробації.
+               Це шанс залишити людину на волі під наглядом, відновивши її зв'язок із суспільством («щеплення» до
+               громади) до того, як вона потрапить за ґрати.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-11">
+         <span class="section-badge">Прикладна площина • Етап 4</span>
+         <h2>11. Пенітенціарна площина (Виправлення та ресоціалізація)</h2>
+         <p>Пенітенціарна система вмикається тоді, коли всі попередні інститути не впоралися, і людина свідомо зламала
+            правову огорожу, ставши небезпечною для суспільства:</p>
+         <ul>
+            <li><strong>Кошара як ізоляція vs реінтеграція:</strong> У побутовому значенні «кошара» — це тісна камера
+               або колонія, куди суспільство ізолює правопорушників. Проте завдання пенітенціарної педагогіки —
+               перетворити місце ізоляції на простір захисту людини від її власних руйнівних звичок та кримінального
+               середовища.</li>
+            <li><strong>«Інші кошари» як субкультура:</strong> Ув'язнені часто живуть за законами кримінальної
+               субкультури («іншої кошари»). Завдання капелана, психолога та соціального працівника — допомогти людині
+               почути інший голос (голос совісті, закону, людяності) та вийти із замкненого кола злочинності.</li>
+            <li><strong>Чи може «козел» стати «вівцею» (проблема рецидиву):</strong> У пенітенціарній практиці «козли» —
+               це особи зі стійкою асоціальною спрямованістю. Проте концепція ресоціалізації базується на презумпції
+               того, що людина не є злочинцем назавжди — зміна поведінки можлива через глибоке переосмислення життя.
+            </li>
+            <li><strong>Сухі галузки та повернення до соціуму:</strong> Людина, яка втратила соціальні зв'язки (сім'ю,
+               роботу, довіру суспільства), стає «сухою галузкою», приреченою на повторний злочин. Соціальна адаптація
+               після звільнення працює як «щеплення дикої оливи» — приєднання колишнього засудженого до здорової
+               громади, щоб він міг живитися новими соціальними нормами.</li>
+         </ul>
+      </section>
+
+      <section class="card" id="sec-12">
+         <span class="section-badge">Узагальнення</span>
+         <h2>12. Зведена порівняльна таблиця</h2>
+         <p>Як біблійні метафори працюють на всіх чотирьох етапах становлення, соціалізації та виправлення людини:</p>
+
+         <div class="table-wrapper">
+            <table>
+               <thead>
+                  <tr>
+                     <th>Біблійний образ</th>
+                     <th>Педагогічна площина (Навчання)</th>
+                     <th>Виховна площина (Розвиток)</th>
+                     <th>Правова та суспільна площина (Проміжна ланка)</th>
+                     <th>Пенітенціарна площина (Виправлення)</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><strong>Кошара</strong></td>
+                     <td>Безпечний клас, освітнє середовище</td>
+                     <td>Сім'я, коло здорового спілкування</td>
+                     <td>Правове поле держави, закон як межа безпеки</td>
+                     <td>Установа виконання покарань / центр ресоціалізації</td>
+                  </tr>
+                  <tr>
+                     <td><strong>Вівці та кози</strong></td>
+                     <td>Слухняні учні та норовливі дослідники</td>
+                     <td>Співчутливість проти егоїзму</td>
+                     <td>Законослухняні громадяни проти правопорушників</td>
+                     <td>Соціалізовані особи проти рецидивістів</td>
+                  </tr>
+                  <tr>
+                     <td><strong>Суха галузка</strong></td>
+                     <td>Учень, який втратив інтерес до навчання</td>
+                     <td>Індивід у стані моральної ізоляції</td>
+                     <td>Безробітний, маргінал без соціальних зв'язків</td>
+                     <td>Засуджений із розірваними зв'язками (ризик рецидиву)</td>
+                  </tr>
+                  <tr>
+                     <td><strong>Щеплення дикої оливи</strong></td>
+                     <td>Залучення до наукової чи творчої школи</td>
+                     <td>Засвоєння моральних та культурних норм</td>
+                     <td>Працевлаштування, інтеграція в громаду, пробація</td>
+                     <td>Ресоціалізація та повернення до нормального життя</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+         <div class="highlight-box">
+            <strong>Головний синтез:</strong> Від шкільної парти до правової системи й установ виконання покарань
+            механізм духовного та соціального оновлення залишається єдиним: людині потрібне безпечне середовище
+            («кошара»), наставник або закон («Пастир» / «дітоводитель») та живий зв'язок зі здоровим суспільством
+            («Лозою» чи «шляхетною Оливою»), щоб змінити свою природу і принести добрі плоди.
+         </div>
+      </section>
+
+      <section class="card" id="sec-13">
+         <span class="section-badge">Методичний практикум • Для педагогів</span>
+         <h2>13. Тренінг-семінар для вчителів: «Кошара, Лоза та Дика Олива в шкільному класі»</h2>
+         <p><strong>Мета семінару:</strong> допомогти педагогам переосмислити роботу з «важкими» учнями через призму
+            безпеки та прийняття, зняти тягар «всесильності» та запобігти професійному вигоранню.
+            <br><strong>Тривалість:</strong> 90 хвилин (2 академічні години).</p>
+
+         <div class="stage-box">
+            <div class="stage-header">
+               <span class="stage-title">Етап 1. Вступ та криголам: «Вівці й кози за шкільною партою»</span>
+               <span class="stage-time">15 хв</span>
+            </div>
+            <p><strong>Хід роботи:</strong> Ведучий знайомить учителів із біблійним образом пастуха, який лягає у
+               проході кошари («живі двері»), та пропонує швидку самодіагностику: <em>«Яким учнем у школі були ви самі —
+                  слухняною “вівцею” чи норовливою “козою”?»</em></p>
+            <p><strong>Педагогічний висновок:</strong> У класі нам зручніше працювати з «вівцями», але саме «кози» часто
+               стають першовідкривачами та лідерами, якщо їх не вигнати з класу, а дати їм «скелі» для безпечного
+               дослідження (складні проєкти, дебати, роль капітана).</p>
+         </div>
+
+         <div class="stage-box">
+            <div class="stage-header">
+               <span class="stage-title">Етап 2. Міні-лекція: «Учитель як перший рубіж»</span>
+               <span class="stage-time">15 хв</span>
+            </div>
+            <p><strong>Хід роботи:</strong> Демонстрація Зведеної таблиці (Розділ 12). Ведучий показує, що між шкільною
+               партою та в'язницею є ще проміжна ланка (Право, Закон, пробація). Коли вчитель бачить складного підлітка,
+               він часто відчуває безпорадність перед його майбутнім.</p>
+            <p><strong>Акцент для зняття тривоги:</strong> Учитель не є Виноградарем, який відповідає за врожай усього
+               світу. Завдання вчителя — не зламати «дику оливу», а втримати гілку біля живого стовбура («Лози») тут і
+               зараз, поки дитина перебуває у шкільній «кошарі».</p>
+         </div>
+
+         <div class="stage-box">
+            <div class="stage-header">
+               <span class="stage-title">Етап 3. Робота в малих групах: «Шкільні кейси»</span>
+               <span class="stage-time">35 хв</span>
+            </div>
+            <p>Педагоги об'єднуються у 3 групи (20 хв на обговорення, по 5 хв на презентацію рішень):</p>
+            <ul>
+               <li><strong>Група 1. Кейс «Екологічна обрізка» (Робота з обдарованим порушником):</strong> Учень 8 класу
+                  має високий інтелект, але постійно зриває уроки сарказмом і демонстративною непокорою.
+                  <em>Завдання:</em> Як провести «обрізку» (поставити межі й дати конструктивну критику), щоб не
+                  відламати гілку від Лози, а спрямувати її силу в плоди?</li>
+               <li><strong>Група 2. Кейс «Суха галузка» (Тиха ізоляція та булінг):</strong> Дитина в класі не порушує
+                  дисципліну, але її ігнорують однолітки, вона втратила інтерес до навчання і «засихає» на останній
+                  парті. <em>Завдання:</em> Як учителю стати «Дверима» і допомогти цій дитині знову прищепитися до
+                  живого колективу класу?</li>
+               <li><strong>Група 3. Кейс «Інша кошара» (Вплив вулиці та деструктивних груп):</strong> Підліток потрапив
+                  під вплив агресивної вуличної компанії чи небезпечних онлайн-спільнот, де діють закони сили, а не
+                  людяності. <em>Завдання:</em> Як школа може співпрацювати з батьками, шкільним психологом та
+                  ювенальною превенцією (проміжною ланкою), щоб дитина почула інший, здоровий голос?</li>
+            </ul>
+         </div>
+
+         <div class="stage-box">
+            <div class="stage-header">
+               <span class="stage-title">Етап 4. Вправа на профілактику вигорання: «Межі моєї відповідальності»</span>
+               <span class="stage-time">15 хв</span>
+            </div>
+            <p><strong>Хід роботи:</strong> Учителі ділять аркуш навпіл. Ліворуч пишуть: <em>«Що в моїй владі як Пастиря
+                  класу»</em> (тон мого голосу, справедливість оцінювання, атмосфера безпеки на уроці, щирий інтерес до
+               дитини). Праворуч пишуть: <em>«Що поза межами моєї влади»</em> (економічна криза, травми в сім'ї дитини,
+               остаточний життєвий вибір учня після випуску).</p>
+            <p><strong>Висновок:</strong> Усвідомлення меж своєї відповідальності рятує педагога від почуття
+               безпорадності та зберігає внутрішній ресурс.</p>
+         </div>
+
+         <div class="stage-box">
+            <div class="stage-header">
+               <span class="stage-title">Етап 5. Рефлексія та завершення: «Слово підтримки»</span>
+               <span class="stage-time">10 хв</span>
+            </div>
+            <p>Учасники по колу діляться однією думкою, відповідаючи на запитання: <em>«Яку одну маленьку дію я зроблю
+                  вже завтра на своєму уроці, щоб мій клас став безпечнішою “кошарою” для дітей?»</em> Кожен отримує
+               роздрукований примірник цього посібника.</p>
+         </div>
+      </section>
+
+      <footer>
+         <p>Простір педагогічної безпеки (Pedagogical Sheepfold) • Створено для освітнього, виховного та методичного
+            використання.</p>
+      </footer>
+   </div>
+
+   <button id="scrollTopBtn" title="Повернутися вгору" aria-label="Повернутися вгору">&#8593;</button>
+
+   <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+         if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("visible");
+         } else {
+            scrollTopBtn.classList.remove("visible");
+         }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+         window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+         });
+      });
+   </script>
+
+</body>
+
+</html>

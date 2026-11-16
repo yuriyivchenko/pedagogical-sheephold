@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Сертифікат учасника педагогічного семінару</title>
+   <style>
+      :root {
+         --bg-dark: #ede9e1;
+         --paper-bg: #fffdf9;
+         --text-main: #2d3142;
+         --text-muted: #5c6378;
+         --accent: #8c6239;
+         --accent-gold: #b88a44;
+         --accent-light: #f5efe6;
+      }
+
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: "Georgia", "Times New Roman", serif;
+         background-color: var(--bg-dark);
+         color: var(--text-main);
+         padding: 20px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .toolbar {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         width: 100%;
+         max-width: 1050px;
+         background: #ffffff;
+         padding: 15px 25px;
+         border-radius: 10px;
+         margin-bottom: 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 15px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      }
+
+      .toolbar-info h1 {
+         font-size: 1.1rem;
+         color: var(--accent);
+      }
+
+      .toolbar-info p {
+         font-size: 0.85rem;
+         color: var(--text-muted);
+      }
+
+      .print-btn {
+         background-color: var(--accent);
+         color: #ffffff;
+         border: none;
+         padding: 10px 22px;
+         font-size: 0.95rem;
+         font-weight: 600;
+         border-radius: 8px;
+         cursor: pointer;
+         transition: background 0.2s;
+      }
+
+      .print-btn:hover {
+         background-color: #704d2c;
+      }
+
+      /* Аркуш А4 альбомної орієнтації */
+      .certificate-sheet {
+         width: 297mm;
+         height: 210mm;
+         background: var(--paper-bg);
+         padding: 14mm;
+         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+         position: relative;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .border-outer {
+         border: 3px solid var(--accent);
+         height: 100%;
+         padding: 4mm;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .border-inner {
+         border: 1px solid var(--accent-gold);
+         height: 100%;
+         padding: 12mm 18mm;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         text-align: center;
+         position: relative;
+         background-image: radial-gradient(circle at center, rgba(140, 98, 57, 0.03) 0%, transparent 70%);
+      }
+
+      .top-label {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         font-size: 0.95rem;
+         letter-spacing: 3px;
+         text-transform: uppercase;
+         color: var(--accent-gold);
+         font-weight: bold;
+      }
+
+      .cert-title {
+         font-size: 3.4rem;
+         color: var(--accent);
+         letter-spacing: 6px;
+         text-transform: uppercase;
+         margin: 6px 0 2px;
+         font-weight: normal;
+      }
+
+      .cert-subtitle {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         font-size: 1rem;
+         color: var(--text-muted);
+         letter-spacing: 1px;
+      }
+
+      .recipient-block {
+         margin: 14px 0;
+      }
+
+      .recipient-intro {
+         font-style: italic;
+         font-size: 1.15rem;
+         color: var(--text-muted);
+         margin-bottom: 8px;
+      }
+
+      /* Редаговані поля */
+      [contenteditable="true"] {
+         outline: none;
+         border-bottom: 1.5px dashed rgba(140, 98, 57, 0.4);
+         transition: background-color 0.2s, border-color 0.2s;
+         padding: 2px 8px;
+         border-radius: 4px;
+      }
+
+      [contenteditable="true"]:hover,
+      [contenteditable="true"]:focus {
+         background-color: var(--accent-light);
+         border-bottom-color: var(--accent);
+      }
+
+      .recipient-name {
+         font-size: 2.3rem;
+         font-weight: bold;
+         color: var(--text-main);
+         display: inline-block;
+         min-width: 60%;
+         margin-bottom: 6px;
+      }
+
+      .recipient-org {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         font-size: 1rem;
+         color: var(--text-muted);
+         display: inline-block;
+         min-width: 50%;
+      }
+
+      .topic-block {
+         background: var(--accent-light);
+         padding: 14px 24px;
+         border-radius: 8px;
+         border-left: 4px solid var(--accent);
+         border-right: 4px solid var(--accent);
+         margin: 10px auto;
+         max-width: 88%;
+      }
+
+      .topic-intro {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         font-size: 0.95rem;
+         color: var(--text-main);
+         margin-bottom: 6px;
+      }
+
+      .topic-name {
+         font-size: 1.35rem;
+         font-weight: bold;
+         color: var(--accent);
+         margin-bottom: 6px;
+      }
+
+      .topic-details {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         font-size: 0.9rem;
+         color: var(--text-muted);
+      }
+
+      .footer-row {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+         margin-top: 15px;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         font-size: 0.95rem;
+      }
+
+      .sign-box {
+         text-align: center;
+         min-width: 220px;
+      }
+
+      .sign-line {
+         font-weight: bold;
+         color: var(--text-main);
+         margin-bottom: 4px;
+         display: block;
+      }
+
+      .sign-caption {
+         font-size: 0.8rem;
+         color: var(--text-muted);
+      }
+
+      .seal-circle {
+         width: 76px;
+         height: 76px;
+         border: 2px solid var(--accent-gold);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 0.7rem;
+         color: var(--accent-gold);
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+         font-weight: bold;
+         text-align: center;
+         padding: 6px;
+      }
+
+      @media print {
+         @page {
+            size: A4 landscape;
+            margin: 0;
+         }
+
+         body {
+            background: #ffffff;
+            padding: 0;
+         }
+
+         .toolbar {
+            display: none !important;
+         }
+
+         .certificate-sheet {
+            box-shadow: none;
+            width: 297mm;
+            height: 210mm;
+            margin: 0;
+         }
+
+         [contenteditable="true"] {
+            border-bottom: none;
+            background: transparent !important;
+         }
+
+         .topic-block,
+         .border-inner {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="toolbar">
+      <div class="toolbar-info">
+         <h1>Генератор сертифіката (А4 альбомний)</h1>
+         <p>Клікніть на ПІБ, заклад освіти, дату чи підпис прямо на бланку, щоб відредагувати перед друком</p>
+      </div>
+      <button class="print-btn" onclick="window.print()">Роздрукувати / Зберегти в PDF</button>
+   </div>
+
+   <div class="certificate-sheet">
+      <div class="border-outer">
+         <div class="border-inner">
+            <div>
+               <div class="top-label">Педагогічна майстерня • Підвищення кваліфікації</div>
+               <h1 class="cert-title">Сертифікат</h1>
+               <div class="cert-subtitle">підтверджує успішну участь у практичному семінарі-тренінгу</div>
+            </div>
+
+            <div class="recipient-block">
+               <div class="recipient-intro">Цим засвідчується, що</div>
+               <div class="recipient-name" contenteditable="true" title="Клікніть, щоб вписати ПІБ">Прізвище Ім'я По
+                  Батькові</div><br>
+               <div class="recipient-org" contenteditable="true" title="Клікніть, щоб вписати заклад освіти">вчитель /
+                  педагогічний працівник закладу загальної середньої освіти</div>
+            </div>
+
+            <div class="topic-block">
+               <div class="topic-intro">взяв(ла) активну участь у роботі інтерактивного семінару-практикуму на тему:
+               </div>
+               <div class="topic-name">«Кошара, Лоза та Дика Олива в шкільному класі: архітектура безпеки, вибору та
+                  змін»</div>
+               <div class="topic-details" contenteditable="true">Обсяг навчального навантаження: 2 академічні години
+                  (0,06 кредиту ЄКТС) • Профілактика вигорання та робота з девіантною поведінкою</div>
+            </div>
+
+            <div class="footer-row">
+               <div class="sign-box">
+                  <span class="sign-line" contenteditable="true">«16» листопада 2026 р.</span>
+                  <div class="sign-caption">Дата проведення</div>
+               </div>
+
+               <div class="seal-circle">Простір<br>безпеки та<br>розвитку</div>
+
+               <div class="sign-box">
+                  <span class="sign-line" contenteditable="true">Ім'я Прізвище Ведучого</span>
+                  <div class="sign-caption">Ведучий семінару / Модератор</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>
